@@ -1,0 +1,41 @@
+.container{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.inputElements{
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid gray;
+}
+
+.buttonContainer{
+    display: grid;
+    place-items: center;
+    margin-top: 7px;
+}
+
+.signInWithGoogle{
+    background-color: beige;
+    border: 1px solid grey;
+    border-radius: 8px;
+    margin-top: 7px;
+}
+
+.signInWithFacebook{
+    background-color: beige;
+    border: 1px solid grey;
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+.signInWithGoogle:hover{
+    background-color: gray;
+    cursor: pointer;
+}
