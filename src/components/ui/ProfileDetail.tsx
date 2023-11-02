@@ -23,7 +23,7 @@ export default function ProfileDetail() {
         </div>
       </div>
       ) : (
-        <p>You are not logged in. Please <Link href="/" className={styles.link}>log in</Link></p>
+        <p>You are not logged in. Please <Link href="/" className={styles.link} style={{textDecoration:`underline`}}>log in</Link></p>
       )}
     </div>
   );

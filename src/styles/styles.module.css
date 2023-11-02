@@ -76,6 +76,10 @@
     background-color: gray;
     cursor: pointer;
 }
+.signInWithFacebook:hover{
+    cursor: pointer;
+    border: 1px solid rgb(16, 16, 88)
+}
 
 .heading {
     display: grid;
@@ -152,4 +156,12 @@
 .profile{
     background-color: white !important;
     border-radius: 15px;
+}
+
+.link{
+    color:white;
+}
+
+.link:hover{
+    cursor: pointer;
 }
