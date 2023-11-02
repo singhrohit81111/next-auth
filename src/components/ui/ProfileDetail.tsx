@@ -4,12 +4,14 @@
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import styles from '../../styles/styles.module.css';
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function ProfileDetail() {
   const { data: session } = useSession(
 
   );
-  console.log(session);
+
 
   return (
     <div className={styles.Container}>
