@@ -129,10 +129,13 @@
 
 .profileHeading{
     min-width: 14vw;
+    min-width: 14vw;
+    margin: 8px 10px;
 }
 
 .profileContent{
     max-width: 14vw;
+    margin: 0px 8px;
 }
 
 .profileButton{
@@ -143,6 +146,7 @@
     outline: none;
     border: 1px solid #bbb;
     width: 75px;
+    margin-bottom: 8px;
 }
 
 .profile{
