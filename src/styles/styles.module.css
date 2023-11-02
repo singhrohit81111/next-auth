@@ -1,41 +1,150 @@
-.container{
+.container {
     display: grid;
     place-items: center;
     min-height: 100vh;
+    background-color: #ececec;
 }
 
-.inputElements{
+.inputElements {
     display: flex;
     flex-direction: column;
 }
 
-.input{
-    border-radius: 3px;
+.input {
     outline: none;
-    border: 1px solid gray;
+    border: 1px solid #bbb;
+    min-width: 20.5vw;
+    margin: 8px 18px;
+    height: 38px;
+    border-radius: 0.5rem;
 }
 
-.buttonContainer{
+.signInButton {
     display: grid;
     place-items: center;
     margin-top: 7px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    margin-top: 7px;
+    min-width: 23.5vw;
+    /*max-width: 25.5vw;*/
+    min-height: 8.5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 8px 18px 23px;
+    background-color: white;
 }
 
-.signInWithGoogle{
-    background-color: beige;
+.signInWithGoogle {
+    background-color: white;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    margin-top: 7px;
+    min-width: 20.5vw;
+    /*max-width: 25.5vw;*/
+    min-height: 8.5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 8px 18px;
+}
+
+.signInWithFacebook {
+    background-color: #006aff;
     border: 1px solid grey;
     border-radius: 8px;
     margin-top: 7px;
+    min-width: 20.5vw;
+    /*max-width: 25.5vw;*/
+    min-height: 8.5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 8px 18px;
 }
 
-.signInWithFacebook{
-    background-color: beige;
-    border: 1px solid grey;
-    border-radius: 8px;
-    margin-top: 6px;
-}
-
-.signInWithGoogle:hover{
+.signInWithGoogle:hover {
     background-color: gray;
     cursor: pointer;
+}
+
+.heading {
+    display: grid;
+    place-items: center;
+    margin-top:12px
+}
+
+.loginForm {
+    background-color: white;
+    border-radius: 2rem;
+    min-width: 368px;
+}
+
+.googleIcon{
+    font-size: 33px;
+    margin-top: 8px;
+}
+.line{
+    margin: 8px 18px;
+    background-color: #bbb;
+}
+
+.facebookIcon{
+    font-size: 33px;
+    margin-top: 8px;
+    color: white;
+    margin-left: 13px;
+}
+
+.label{
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    text-align: left;
+    min-width: 20.5vw;
+    margin: 8px 18px 0px 18px;
+}
+
+.divider{
+    display: grid;
+    place-items: center;
+}
+
+.Container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    background-color: #bbb;
+}
+
+.profileHeading{
+    min-width: 14vw;
+}
+
+.profileContent{
+    max-width: 14vw;
+}
+
+.profileButton{
+    margin-left: 50px;
+    font-size: 18px;
+    margin-top: 9px;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #bbb;
+    width: 75px;
+}
+
+.profile{
+    background-color: white !important;
 }

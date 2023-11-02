@@ -1,32 +1,31 @@
-'use client' 
+'use client'
 
 import LoginForm from '@/components/ui/LoginForm';
 import { Session } from 'next-auth'
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
+import styles from '.././styles/styles.module.css';
 
 interface Props {
   session: Session | null
 }
 
-const Home: React.FC<Props> = ( ) => {
+const Home: React.FC<Props> = () => {
   const { data: session } = useSession();
-console.log(session?.user);
+  console.log(session?.user);
 
-  if (!session) return <LoginForm/>;
+  if (!session) return <LoginForm />;
 
   return (
-    <div>
-      <h1>Profile</h1>
-      {session ? (
-        <div>
-          <p>Welcome, {session.user?.email}</p>
-          <p>Designation: {session.user?.designation}</p>
-          <button onClick={()=>signOut({callbackUrl:`http://localhost:3000`})}>signout</button>
+    <div className={styles.Container}>
+      <div className={styles.profile}>
+        <h1 className={styles.profileHeading}>Profile</h1>
+        <div className={styles.profileContent}>
+          <p className={styles.para}>Welcome, {session.user?.name}</p>
+          <p className={styles.para}>You are logged in here as as, {session.user?.email}</p>
+          <button onClick={() => signOut({ callbackUrl: `http://localhost:3000` })} className={styles.profileButton}>Signout</button>
         </div>
-      ) : (
-        <p>You are not logged in. Please <Link href="/">log in</Link></p>
-      )}
+      </div>
     </div>
   );
 };

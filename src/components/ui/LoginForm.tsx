@@ -15,22 +15,25 @@ export default function LoginForm() {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
-        const res=await signIn("credentials", {
+        await signIn("credentials", {
             email: formData.email,
             password: formData.password,
-            
         });
-        console.log(res,"res");
-        
+
+
     };
 
     return (
         <div className={styles.container}>
-            <div >
-                <h1>Login</h1>
+            <div className={styles.loginForm}>
+                <h1 className={styles.heading}>Login</h1>
+                <SiginWithGoogle />
+                <SigninWithFacebook />
+                <div className={styles.divider}>Or</div>
+                <hr className={styles.line}/>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.inputElements}>
-                        <label>Email:</label>
+                        <label className={styles.label}>Email</label>
                         <input
                             type="text"
                             name="email"
@@ -40,7 +43,7 @@ export default function LoginForm() {
                         />
                     </div>
                     <div className={styles.inputElements}>
-                        <label>Password:</label>
+                        <label className={styles.label}>Password</label>
                         <input
                             type="password"
                             name="password"
@@ -49,11 +52,9 @@ export default function LoginForm() {
                             className={styles.input}
                         />
                     </div>
-                    <div className={styles.buttonContainer}><button type="submit">Login</button></div>
-                    <div>Or</div>
-                    <hr/>
-                    <SiginWithGoogle/>
-                    <SigninWithFacebook/>
+                    <div ><button type="submit" className={styles.signInButton}>Sign in with Credentials</button></div>
+
+
                 </form>
             </div>
         </div>

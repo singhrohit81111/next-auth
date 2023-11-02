@@ -1,12 +1,13 @@
 import React from 'react'
-import { AiOutlineFacebook } from 'react-icons/ai';
+import { BsFacebook } from 'react-icons/bs';
 import styles from '../../styles/styles.module.css';
+import { signIn } from 'next-auth/react';
 
 export default function SigninWithFacebook() {
   return (
-    <div className={styles.signInWithFacebook}>
+    <div className={styles.signInWithFacebook} onClick={()=>signIn('facebook')}>
+      <span><BsFacebook className={styles.facebookIcon}/></span>
       <span>Sign in with Facebook</span>
-      <span><AiOutlineFacebook/></span>
     </div>
   )
 }

@@ -1,21 +1,25 @@
 export const USERS = [
     {
-        email: "Rohit",
+        email: "Ram@gmail.com",
+        name: "Ram",
         password: "1234",
-        designation: "software developer"
+        designation: "Php Developer",
     },
     {
-        email: "Ram",
-        password: "1234",
-        designation: "Php Developer"
-    },
-    {
-        email: "Sham",
+        email: "Sham@gmail.com",
+        name: "Sham",
         password: "1234",
         designation: "Angular developer"
     },
     {
-        email: "Raman",
+        email: "Rohit@gmail.com",
+        name: "Rohit",
+        password: "1234",
+        designation: "software developer"
+    },
+    {
+        email: "Raman@gmail.com",
+        name: "Raman",
         password: "1234",
         designation: " Trainee"
     }

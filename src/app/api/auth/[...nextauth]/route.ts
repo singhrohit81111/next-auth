@@ -3,6 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials"
 import { User } from "@/types/interface";
 import GoogleProvider from "next-auth/providers/google";
 import { USERS } from "@/constants/users";
+import FacebookProvider from "next-auth/providers/facebook";
 
 const options: NextAuthOptions = {
   providers: [
@@ -11,6 +12,10 @@ const options: NextAuthOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
 
     } as any),
+    FacebookProvider({
+      clientId: process.env.FACEBOOK_CLIENT_ID,
+      clientSecret: process.env.FACEBOOK_CLIENT_SECRET
+    }as any),
     CredentialsProvider({
       name: "Credentials",
       credentials: {
@@ -20,10 +25,14 @@ const options: NextAuthOptions = {
       authorize: async (credentials: User) => {
         if (!credentials.email || !credentials.password || !credentials) {
           return null;
-        } else {
-          const user = USERS.find(USER => { return USER.password === credentials?.password });
-          return user;
         }
+
+        const user = USERS.find(USER => { 
+          console.log(USER);
+          return USER.email === credentials?.email 
+        });
+        return user;
+
       },
     }),
   ],
