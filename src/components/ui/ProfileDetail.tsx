@@ -13,7 +13,7 @@ export default function ProfileDetail() {
 
   return (
     <div className={styles.Container}>
-      {session ? (
+      {session && (
         <div className={styles.profile}>
         <h1 className={styles.profileHeading}>Profile</h1>
         <div className={styles.profileContent}>
@@ -22,8 +22,6 @@ export default function ProfileDetail() {
           <button onClick={() => signOut({ callbackUrl: `http://localhost:3000` })} className={styles.profileButton}>Signout</button>
         </div>
       </div>
-      ) : (
-        <p>You are not logged in. Please <Link href="/" className={styles.link} style={{textDecoration:`underline`}}>log in</Link></p>
       )}
     </div>
   );

@@ -1,6 +1,6 @@
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials"
-import { User } from "@/types/interface";
+import { User } from "@/types/user";
 import GoogleProvider from "next-auth/providers/google";
 import { USERS } from "@/constants/users";
 import FacebookProvider from "next-auth/providers/facebook";
@@ -29,7 +29,7 @@ const options: NextAuthOptions = {
 
         const user = USERS.find(USER => { 
           console.log(USER);
-          return USER.email === credentials?.email 
+          return USER.email === credentials?.email && USER.password === credentials?.password 
         });
         return user;
 

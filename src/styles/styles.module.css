@@ -38,6 +38,9 @@
     margin: 8px 18px 23px;
     background-color: white;
 }
+.signInButton:hover{
+    cursor: pointer;
+}
 
 .signInWithGoogle {
     background-color: white;
