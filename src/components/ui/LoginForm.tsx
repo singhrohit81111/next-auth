@@ -18,8 +18,9 @@ export default function LoginForm() {
         await signIn("credentials", {
             email: formData.email,
             password: formData.password,
+            callbackUrl:`http://localhost:3000/profile`
         });
-
+         
 
     };
 

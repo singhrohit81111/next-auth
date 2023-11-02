@@ -5,7 +5,7 @@ import { signIn } from 'next-auth/react';
 
 export default function SiginWithGoogle() {
   return (
-    <div className={styles.signInWithGoogle} onClick={()=>signIn('google')}>
+    <div className={styles.signInWithGoogle} onClick={()=>signIn('google',{callbackUrl:`http://localhost:3000/profile`})}>
       <span><FcGoogle className={styles.googleIcon}/></span>
       <span>Sign in with Google</span>
     </div>
